@@ -17,12 +17,14 @@
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
         crossorigin="anonymous"
       />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <title>Tin Luong</title>
+
     </head>
 
     <body>
         <div class="navigation">
-            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+            <input type="checkbox" class="navigation__checkbox" name ='nav' value='open' id="navi-toggle">
 
             <label for="navi-toggle" class="navigation__button">
                 <span class="navigation__icon">&nbsp;</span>
@@ -31,12 +33,12 @@
             <div class="navigation__background">&nbsp;</div>
 
             <nav class="navigation__nav">
-                <ul class="navigation__list">
-                    <li class="navigation__item"><a href="#about" class="navigation__link"><span>01</span>About Tin Luong</a></li>
-                    <li class="navigation__item"><a href="#skills" class="navigation__link"><span>02</span>Skills & Stacks</a></li>
-                    <li class="navigation__item"><a href="#projects" class="navigation__link"><span>03</span>Projects</a></li>
-                    <li class="navigation__item"> <a href="https://drive.google.com/open?id=1QEImlykCn47Tm6PgCWEoar0x2xooKzMl" target="_blank" class="navigation__link"><span>04</span>Resume</a></li>
-                    <li class="navigation__item"><a href="#contact" class="navigation__link"><span>05</span>Say Hello</a></li>
+                    <ul class="navigation__list">
+                            <li class="navigation__item"><a href="#about" class="navigation__link"><span>01</span>About Tin Luong</a></li>
+                            <li class="navigation__item"><a href="#skills" class="navigation__link"><span>02</span>Skills & Stacks</a></li>
+                            <li class="navigation__item"><a href="#projects" class="navigation__link"><span>03</span>Projects</a></li>
+                            <li class="navigation__item"> <a href="https://drive.google.com/open?id=1QEImlykCn47Tm6PgCWEoar0x2xooKzMl" target="_blank" class="navigation__link"><span>04</span>Resume</a></li>
+                            <li class="navigation__item"><a href="#contact" class="navigation__link"><span>05</span>Say Hello</a></li>
                     </ul>
             </nav>
         </div>
@@ -68,7 +70,7 @@
                     <div class="col-1-of-2">
                         <h3 class="heading-tertiary u-margin-bottom-small">He has the will to learn</h3>
                         <p class="paragraph">
-                            As a lifelong learner, he loves taking on challenges and creating solutions for real world problems. He has experience with modern front-end and back-end framworks in Javascript and Python.
+                            As a lifelong learner, he continuously explores and learns new technologies. He also taking on challenges and creating solutions for real world problems. He has experience with modern front-end and back-end framworks in Javascript and Python.
                         </p>
 
                         <h3 class="heading-tertiary u-margin-bottom-small">He's worked on many interesting projects</h3>
@@ -512,6 +514,14 @@
             </div>
         </section>
         -->
-
+        <script>
+            $(document).ready(function(){
+                let nav_item = $(".navigation__item");
+                let check_box = $("#navi-toggle");
+                nav_item.click(()=>{
+                    check_box.prop('checked',false);
+                })
+            })
+        </script>
     </body>
 </html>
